@@ -9,7 +9,7 @@ const BookEdit = ({ book, onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="edit-book">
+    <form onSubmit={handleSubmit} className="book-edit">
       <label>Edit Title</label>
       <input
         className="input"

@@ -21,7 +21,7 @@ const BookShow = ({ book, onDelete, onEdit }) => {
   return (
     <div className="book-show">
       {showEdit ? <BookEdit book={book} onSubmit={handleSubmit} /> : content}
-      <div>
+      <div className="actions">
         <button className="edit" onClick={handleEdit}>
           Edit
         </button>

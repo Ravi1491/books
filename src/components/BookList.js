@@ -8,7 +8,7 @@ const BookList = ({ books, onDelete, onEdit }) => {
     );
   });
 
-  return <div>{renderBooks}</div>;
+  return <div className="book-list">{renderBooks}</div>;
 };
 
 export default BookList;

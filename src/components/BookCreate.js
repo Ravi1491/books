@@ -10,18 +10,19 @@ const BookCreate = ({ createBook }) => {
   };
 
   return (
-    <>
+    <div className="book-create">
       <div>Add a Book</div>
       <form onSubmit={handleSubmit}>
         <label>Title</label>
         <input
           type="text"
           value={title}
+          className="input"
           onChange={(e) => setTitle(e.target.value)}
         />
-        <button>Submit</button>
+        <button className="button">Create</button>
       </form>
-    </>
+    </div>
   );
 };
 
