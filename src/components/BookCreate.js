@@ -11,7 +11,7 @@ const BookCreate = ({ createBook }) => {
 
   return (
     <div className="book-create">
-      <div>Add a Book</div>
+      <h3>Add a Book</h3>
       <form onSubmit={handleSubmit}>
         <label>Title</label>
         <input

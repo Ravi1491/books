@@ -3,15 +3,6 @@ import BookEdit from "./BookEdit";
 
 const BookShow = ({ book, onDelete, onEdit }) => {
   const [showEdit, setShowEdit] = useState(false);
-  const handleDelete = () => {
-    onDelete(book.id);
-  };
-
-  const content = <h3>{book.title}</h3>;
-
-  const handleEdit = () => {
-    setShowEdit(true);
-  };
 
   const handleSubmit = (id, title) => {
     setShowEdit(false);
@@ -20,12 +11,19 @@ const BookShow = ({ book, onDelete, onEdit }) => {
 
   return (
     <div className="book-show">
-      {showEdit ? <BookEdit book={book} onSubmit={handleSubmit} /> : content}
+      <img alt="img" src={`https://picsum.photos/seed/${book.id}/300/200 `} />
+      <div>
+        {showEdit ? (
+          <BookEdit book={book} onSubmit={handleSubmit} />
+        ) : (
+          <h3>{book.title}</h3>
+        )}
+      </div>
       <div className="actions">
-        <button className="edit" onClick={handleEdit}>
+        <button className="edit" onClick={() => setShowEdit(true)}>
           Edit
         </button>
-        <button className="delete" onClick={handleDelete}>
+        <button className="delete" onClick={() => onDelete(book.id)}>
           Delete
         </button>
       </div>
