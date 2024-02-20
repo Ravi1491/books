@@ -18,7 +18,6 @@ function App() {
 
   const createBook = async (title) => {
     const book = await axios.post("http://localhost:3001/books", {
-      id: Math.floor(Math.random() * 9999),
       title,
     });
 
@@ -28,9 +27,12 @@ function App() {
 
   const deleteBookById = async (id) => {
     await axios.delete(`http://localhost:3001/books/${id}`);
-    const books = await axios.get("http://localhost:3001/books");
 
-    setBooks(books.data);
+    const updatedBooks = books.filter((book) => {
+      return book.id !== id;
+    });
+
+    setBooks(updatedBooks);
   };
 
   const editBookById = async (id, newTitle) => {

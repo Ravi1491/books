@@ -11,7 +11,7 @@ const BookShow = ({ book, onDelete, onEdit }) => {
 
   return (
     <div className="book-show">
-      <img alt="img" src={`https://picsum.photos/seed/${book.id}/300/200 `} />
+      <img alt="books" src={`https://picsum.photos/seed/${book.id}/300/200 `} />
       <div>
         {showEdit ? (
           <BookEdit book={book} onSubmit={handleSubmit} />

@@ -10635,6 +10635,7 @@ a.has-text-danger-dark:hover {
   bottom: 0;
   padding: 20px 40px 30px;
   position: fixed;
+  z-index: 2;
   width: 100%;
 }
 .book-create h3 {
@@ -10726,6 +10727,7 @@ a.has-text-danger-dark:hover {
   position: relative;
   vertical-align: top;
   width: 20px;
+  z-index: 1;
 }
 .book-show .edit:after {
   color: #fff;
